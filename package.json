@@ -1,0 +1,27 @@
+{
+  "name": "demo-backend",
+  "version": "1.0.0",
+  "description": "Product API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Parth Gupta",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^19.0.0",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/joi": "^17.1.0",
+    "@hapi/vision": "^6.0.0",
+    "@types/hapi": "^17.6.1",
+    "app-module-path": "^2.2.0",
+    "bunyan": "^1.8.12",
+    "config": "^3.2.5",
+    "hapi-cors-headers": "^1.0.3",
+    "hapi-swagger": "^12.1.0",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
+}
