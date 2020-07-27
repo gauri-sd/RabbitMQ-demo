@@ -107,6 +107,7 @@ exports.getWeather = async(request, reply) => {
         // .then(function(results) {
         //     console.log(results);
         // });
+        console.log(weather_data);
         await Q.pQueue(queue, weather_data);
         return reply.response(Response.sendResponse(true, weather_data, ResponseMessage.SUCCESS, StatusCode.OK));
     }
@@ -117,7 +118,7 @@ exports.getWeather = async(request, reply) => {
 
 exports.getWeatherMQRabbit = async(request, reply) => {
     try{
-        const receive = await Q.receive(queue);
+        const receive = await Q.receive();
         return reply.response(Response.sendResponse(true, receive, ResponseMessage.SUCCESS, StatusCode.OK));
     }
     catch(error){
